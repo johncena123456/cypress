@@ -8,7 +8,7 @@ describe("Positive test case for single post ", () => {
   });
 
   it("should successfully be create OPEN Post", () =>{
-    cy.get('button#create-button').click();
+    cy.get('button#create-button',{timeout:10000}).should('be.visible').click();
     cy.get('button.hyphenButton.poll-btn.btn.btn-default').contains('OPEN').click();
     cy.get('div.Select-control').click();
     cy.get("div.Select-option.allOption").click();
