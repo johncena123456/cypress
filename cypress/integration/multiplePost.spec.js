@@ -8,7 +8,7 @@ describe("Positive test case for multiple post", () => {
     });
   
     it("should successfully be create Multiple choice Post", () =>{
-    cy.get('button#create-button').should('be.visible').click();
+    cy.get('button#create-button',{timeout:10000}).should('be.visible').click();
     cy.get('button.hyphenButton.poll-btn.btn.btn-default').contains('MULTIPLE CHOICE').click();
     cy.get('div.Select-control').click();
     cy.get("div.Select-option.allOption").click();
